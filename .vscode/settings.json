@@ -1,0 +1,6 @@
+{
+  "cSpell": {
+    "words": ["Parens"],
+    "ignorePaths": ["node_modules/**", "dist/"]
+  }
+}

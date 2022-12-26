@@ -1,0 +1,39 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch index.ts",
+      "runtimeArgs": ["-r", "dotenv/config"], // , "-r", "ts-node/register", "-r", "tsconfig-paths/register"
+      "args": ["${workspaceFolder}/dist/index.js"],
+      "cwd": "${workspaceFolder}",
+      "sourceMaps": true,
+      "outputCapture": "std",
+      "env": { "DOTENV_CONFIG_PATH": "${workspaceFolder}/.dev.env" },
+      "preLaunchTask": {
+        "type": "npm",
+        "script": "build"
+      }
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to index.ts",
+      "port": 8230,
+      "restart": true,
+      "cwd": "${workspaceRoot}",
+      "skipFiles": ["<node_internals>/**"]
+      // "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Firebase Functions",
+      "port": 9229
+    }
+  ]
+}

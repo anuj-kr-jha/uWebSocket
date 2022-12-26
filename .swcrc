@@ -1,0 +1,18 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript"
+    },
+    "baseUrl": ".",
+    "paths": {},
+    "target": "es2022"
+  },
+  "env": {
+    "targets": {
+      "node": 18
+    }
+  },
+  "sourceMaps": true,
+  "inlineSourcesContent": false,
+  "minify": false
+}
